@@ -11,11 +11,11 @@ public class Fenster extends JFrame {
     private JPanel jPanelEast;
     private JPanel jPanelCenter;
 
-    private Label labelNorth;
-    private Label labelSouth;
-    private Label labelWest;
-    private Label labelEast;
-    private Label labelCenter;
+    private JLabel labelNorth;
+    private JLabel labelSouth;
+    private JLabel labelWest;
+    private JLabel labelEast;
+    private JLabel labelCenter;
 
 
     public Fenster() throws HeadlessException {
@@ -31,11 +31,11 @@ public class Fenster extends JFrame {
     }
 
     private void initComponents() {
-        labelNorth = new Label();
-        labelSouth = new Label();
-        labelWest = new Label();
-        labelEast = new Label();
-        labelCenter = new Label();
+        labelNorth = new JLabel();
+        labelSouth = new JLabel();
+        labelWest = new JLabel();
+        labelEast = new JLabel();
+        labelCenter = new JLabel();
 
         labelNorth.setText("North");
         labelSouth.setText("South");
@@ -44,14 +44,17 @@ public class Fenster extends JFrame {
         labelCenter.setText("Center");
 
         jPanelNorth = new JPanel();
+        jPanelWest = new JPanel();
         jPanelCenter = new JPanel();
 
         jPanelNorth.add(labelNorth);
+
         jPanelCenter.add(labelCenter);
 
 
         this.add(jPanelNorth, BorderLayout.NORTH);
         this.add(jPanelCenter, BorderLayout.CENTER);
+
 
     }
 
