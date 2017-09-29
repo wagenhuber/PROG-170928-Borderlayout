@@ -23,8 +23,9 @@ public class Fenster extends JFrame {
         super("Borderlayout");
 
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setSize(800, 800);
+        this.setSize(300, 300);
 
+        //this.pack();
         this.initComponents();
         this.setVisible(true);
 
@@ -46,15 +47,34 @@ public class Fenster extends JFrame {
         jPanelNorth = new JPanel();
         jPanelWest = new JPanel();
         jPanelCenter = new JPanel();
+        jPanelEast = new JPanel();
+        jPanelSouth = new JPanel();
+
+
+        //Hintergrundfarben setzen
+        jPanelSouth.setBackground(Color.RED);
+        jPanelNorth.setBackground(Color.BLUE);
+
+
+        //Umrandung setzen
+        jPanelCenter.setBorder(BorderFactory.createLineBorder(Color.black));
+        jPanelNorth.setBorder(BorderFactory.createLineBorder(Color.black));
+        jPanelSouth.setBorder(BorderFactory.createLineBorder(Color.black));
+        jPanelWest.setBorder(BorderFactory.createLineBorder(Color.black));
+        jPanelEast.setBorder(BorderFactory.createLineBorder(Color.black));
+
 
         jPanelNorth.add(labelNorth);
-
+        jPanelEast.add(labelEast);
         jPanelCenter.add(labelCenter);
-
+        jPanelWest.add(labelWest);
+        jPanelSouth.add(labelSouth);
 
         this.add(jPanelNorth, BorderLayout.NORTH);
         this.add(jPanelCenter, BorderLayout.CENTER);
-
+        this.add(jPanelWest, BorderLayout.WEST);
+        this.add(jPanelSouth, BorderLayout.SOUTH);
+        this.add(jPanelEast, BorderLayout.EAST);
 
     }
 
